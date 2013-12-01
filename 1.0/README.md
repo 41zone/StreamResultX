@@ -63,9 +63,3 @@ Struts2环境下，通过Struts2提供的下载方式进行下载时出现的`ja
 `21:23:44,676  WARN StreamResult:45 - StreamResultX Warn : socket write error`
 
 如果出现该警告说明正确执行，该警告说明，Socket非正常中断，但是流确实已经关闭，自此再也不用看到上面出现的讨厌异常结果。
-
-## 1.2版本建议配置
-将上述
-`<result-type name="streamx" class="com.sunspoter.lib.web.struts2.dispatcher.StreamResultX"/>`
-指向修改如下：
-`<result-type name="streamx" class="cc.fozone.struts2.StreamResultX"/>`
