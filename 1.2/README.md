@@ -1,7 +1,7 @@
 # StreamResultX 1.2
 ## 兼容性
 
-1. 兼容struts2-sunspoter-stream-1.0.jar版本
+1. 兼容`struts2-sunspoter-stream-1.0.jar`版本
 2. JDK最低版本1.5
 
 ## 使用建议
