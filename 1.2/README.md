@@ -45,8 +45,8 @@ Struts2环境下，通过Struts2提供的下载方式进行下载时出现的`ja
     at java.lang.Thread.run(Thread.java:662)  
 
 ## 解决方案
-1. 将struts2-sunspoter-stream-1.0.jar，并复制在/WEB-INF/lib下
-2. 在原有的struts.xml的基础上进行相应的配置，配置如下例
+1. 将`struts2-sunspoter-stream-1.2.jar`，并复制在/WEB-INF/lib下
+2. 在原有的`struts.xml`的基础上进行相应的配置，配置如下例
 
 **配置如下**
 
