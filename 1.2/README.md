@@ -1,4 +1,16 @@
-# StreamResultX
+# StreamResultX 1.2
+## 兼容性
+
+1. 兼容struts2-sunspoter-stream-1.0.jar版本
+2. JDK最低版本1.5
+
+## 使用建议
+在1.2版本中，建议使用`cc.fozone.struts2.StreamResultX`方式，更为简单。
+
+    <result-types>  
+        <result-type name="streamx" class="cc.fozone.struts2.StreamResultX"/>  
+    </result-types>  
+ 
 ## 使用场景
 Struts2环境下，通过Struts2提供的下载方式进行下载时出现的`java.lang.IllegalStateException`异常
 
