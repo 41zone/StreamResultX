@@ -13,7 +13,6 @@ import com.opensymphony.xwork2.ActionInvocation;
  * 原始版本由2011-01-08日发布，现在统一移植至cc.fozone包下，作者依然为原始开发人Jimmy Song
  * @author Jimmy Song
  * @version 1.2 
- * @see https://github.com/41zone/StreamResultX
  */
 public class StreamResultX extends StreamResult {
 

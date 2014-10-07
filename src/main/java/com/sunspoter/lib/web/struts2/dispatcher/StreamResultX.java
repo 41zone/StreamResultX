@@ -15,7 +15,6 @@ import com.opensymphony.xwork2.ActionInvocation;
  * 该类修正了源于ResultStream的一些错误处理，在文档下载取消时释放HttpResponse对象的引用。
  * @author Jimmy Song
  * @version 1.0 
- * @see https://github.com/41zone/StreamResultX
  */
 @Deprecated
 public class StreamResultX extends StreamResult {
