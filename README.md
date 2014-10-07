@@ -1,7 +1,23 @@
-# StreamResultX
+# StreamResultX 1.2
+## 兼容性
+
+1. 兼容`struts2-sunspoter-stream-1.0.jar`版本
+2. JDK最低版本1.6
+
+## 使用建议
+
+在1.2版本中，建议使用`cc.fozone.struts2.StreamResultX`方式，更为简单。
+
+```Xml
+<result-types>  
+    <result-type name="streamx" class="cc.fozone.struts2.StreamResultX"/>  
+</result-types>  
+```
+ 
 ## 使用场景
 Struts2环境下，通过Struts2提供的下载方式进行下载时出现的`java.lang.IllegalStateException`异常
 
+```Java
     2011-1-820:34:20 org.apache.catalina.core.StandardWrapperValve invoke  
     严重: Servlet.service() for servlet default threw exception  
     java.lang.IllegalStateException  
@@ -31,28 +47,31 @@ Struts2环境下，通过Struts2提供的下载方式进行下载时出现的`ja
     at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:588)  
     at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)  
     at java.lang.Thread.run(Thread.java:662)  
+```
 
 ## 解决方案
-1. 将struts2-sunspoter-stream-1.0.jar，并复制在/WEB-INF/lib下
-2. 在原有的struts.xml的基础上进行相应的配置，配置如下例
+1. 将`StreamResultX-1.2.jar`，并复制在/WEB-INF/lib下
+2. 在原有的`struts.xml`的基础上进行相应的配置，配置如下例
 
 **配置如下**
 
-    <package name="default" namespace="/"extends="struts-default">  
-    <!-- 只需要添加这行配置 -->  
-    <result-types>  
-        <result-type name="streamx"class="com.sunspoter.lib.web.struts2.dispatcher.StreamResultX"/>  
-    </result-types>  
-    
-    <action name="download"class="com.DownloadAction">  
-        <!-- 将原有的type="stream"类型修改为type="streamx"即可 -->               
-        <result name="success" type="streamx">  
-            <param name="inputName">download</param>  
-            <param name="bufferSize">4096</param>  
-            <param name="contentDisposition">filename=""</param>  
-            <param name="contentCharSet">UTF-8</param>  
-        </result>  
-    </action>  
+```Xml
+<package name="default" namespace="/"extends="struts-default">  
+<!-- 只需要添加这行配置 -->  
+<result-types>  
+    <result-type name="streamx"class="com.sunspoter.lib.web.struts2.dispatcher.StreamResultX"/>  
+</result-types>  
+
+<action name="download"class="com.DownloadAction">  
+    <!-- 将原有的type="stream"类型修改为type="streamx"即可 -->               
+    <result name="success" type="streamx">  
+        <param name="inputName">download</param>  
+        <param name="bufferSize">4096</param>  
+        <param name="contentDisposition">filename=""</param>  
+        <param name="contentCharSet">UTF-8</param>  
+    </result>  
+</action>
+```  
 
 ### 重点概述
 1. 在这种方式下，只需添加一个result-type；
