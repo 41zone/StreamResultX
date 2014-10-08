@@ -4,6 +4,16 @@
 1. 兼容`struts2-sunspoter-stream-1.0.jar`版本
 2. JDK最低版本1.6
 
+## Maven
+
+```Xml
+<dependency>
+    <groupId>cc.fozone.struts2</groupId>
+    <artifactId>StreamResultX</artifactId>
+    <version>1.2</version>
+</dependency>
+```
+
 ## 使用建议
 
 在1.2版本中，建议使用`cc.fozone.struts2.StreamResultX`方式，更为简单。

@@ -6,7 +6,7 @@
 	<artifactId>StreamResultX</artifactId>
 	<version>1.2</version>
 	<packaging>jar</packaging>
-
+	
 	<name>StreamResultX</name>
 	<url>http://maven.apache.org</url>
 	<description>Struts2 Plugin for Download cancelled exception</description>
